@@ -55,9 +55,9 @@ public class MemoRepositoryTests {
         memoRepository.save(memo);
     }
 
-    @Test
+    //@Test
     public void DeleteDummies() {
-        Long mno = 10L;
+        Long mno = 20L;
 
         memoRepository.deleteById(mno);
     }
@@ -65,7 +65,7 @@ public class MemoRepositoryTests {
     @Test
     public void testPageDefault() {
         // 1페이지 10개
-        Pageable pageable = PageRequest.of(0,10);
+        Pageable pageable = PageRequest.of(0, 10);
 
         Page<Memo> result = memoRepository.findAll(pageable);
         System.out.println(result);
@@ -114,4 +114,5 @@ public class MemoRepositoryTests {
     public void testDeleteQueryMethods() {
         memoRepository.deleteMemoryByMnoLessThan(10L);
     }
+
 }
