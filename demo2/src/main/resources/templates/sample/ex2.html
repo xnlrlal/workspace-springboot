@@ -5,10 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-  <ul>
-    <li th:each="dto, state : ${list}">
-        [[${state.index}]] --- [[${dto}]]
-    </li>
-  </ul>
+    <ul>
+        <li th:each="dto, state : ${list}">
+            [[${state.index}]] --- [[${dto}]]
+        </li>
+    </ul>
 </body>
 </html>
