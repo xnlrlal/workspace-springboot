@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.SampleDto;
+import com.example.demo.dto.SampleDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,10 +23,12 @@ public class SampleController {
         log.info("ex1...................................");
     }
 
+    // @GetMapping의 value 속성값을 '{}'로 처리하면 하나 이상의 URL을 지정할 수 있습니다.
     @GetMapping({"/ex2", "/exLink"})
+    // SampleDTO 타입의 객체를 20개 추가하고 이를 Model에 담아서 전송합니다.
     public void exModel(Model model){
-        List<SampleDto> list = IntStream.rangeClosed(1, 20).asLongStream().mapToObj(i -> {
-                    SampleDto dto = SampleDto.builder()
+        List<SampleDTO> list = IntStream.rangeClosed(1, 20).asLongStream().mapToObj(i -> {
+            SampleDTO dto = SampleDTO.builder()
                             .sno(i)
                             .first("First.." + i)
                             .last("last.." + i)
@@ -42,7 +44,7 @@ public class SampleController {
 
         log.info("exInline.........................");
 
-        SampleDto dto = SampleDto.builder()
+        SampleDTO dto = SampleDTO.builder()
                 .sno(100L)
                 .first("First..100")
                 .last("Last..100")
