@@ -36,6 +36,7 @@ public class SampleController {
                             .build();
                     return dto;
                 }).collect(Collectors.toList());
+
         model.addAttribute("list", list);
     }
 
