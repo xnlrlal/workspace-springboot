@@ -24,15 +24,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    // thymeleaf
+    // Thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // LocalDateTime
     implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time'
-    // mybatis
+    // MyBatis
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
-    // postgreSQL
+    // PostgreSQL
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
     runtimeOnly 'org.postgresql:postgresql'
-    // lombok
+    // Lombok
     annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
     // JPA
