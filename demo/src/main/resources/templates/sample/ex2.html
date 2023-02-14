@@ -6,8 +6,8 @@
 </head>
 <body>
   <ul>
-    <li th:each="dto : ${list}">
-      [[${dto}]]
+    <li th:each="dto, state : ${list}">
+      [[${state.index}]] --- [[${dto}]]
     </li>
   </ul>
 </body>
