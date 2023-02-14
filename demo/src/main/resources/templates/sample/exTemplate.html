@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--  필요한 부분만을 개발해서 템플릿으로 적용  -->
+<th:block th:replace="~{/layout/layout1 :: setContent(~{this :: content})}">
+    <th:block th:fragment="content">
+        <h1>exTemplate Page</h1>
+    </th:block>
+</th:block>
+</html>
