@@ -41,7 +41,6 @@ public class SampleController {
 
     @GetMapping({"/exInline"})
     public String exInline(RedirectAttributes redirectAttributes){
-
         log.info("exInline.........................");
 
         SampleDTO dto = SampleDTO.builder()
